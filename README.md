@@ -74,11 +74,15 @@ To generate visualizations, use the `--gif` flag for GIFs and enable debug mode 
 ![Instagram Match](visualizations/instagram.png)
 ![PayPal Match](visualizations/paypal.png)
 
+## Gif
+
+> Below are examples of how Gif outputs might look (when enabled):
+
 <p align="center">
-  <img src="visualizations/discord.png.gif" width="100"/>
-  <img src="visualizations/google.png.gif" width="100"/>
-  <img src="visualizations/instagram.png.gif" width="100"/>
-  <img src="visualizations/paypal.png.gif" width="100"/>
+  <img src="visualizations/discord.png.gif" width="150"/>
+  <img src="visualizations/google.png.gif" width="150"/>
+  <img src="visualizations/instagram.png.gif" width="150"/>
+  <img src="visualizations/paypal.png.gif" width="150"/>
 </p>
 
 ## Output
