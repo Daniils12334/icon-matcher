@@ -1,7 +1,7 @@
 test_image,match,score
-discord(3).png,discord(1).png_aug0_flip,"tensor(0.8660, grad_fn=<AddBackward0>)"
-discord(3).png,discord(1).png_aug0,"tensor(0.8648, grad_fn=<AddBackward0>)"
-discord(3).png,discord(1).png_aug180_flip,"tensor(0.7931, grad_fn=<AddBackward0>)"
+discord.png,discord(1).png_aug0_flip,"tensor(0.8660, grad_fn=<AddBackward0>)"
+discord.png,discord(1).png_aug0,"tensor(0.8648, grad_fn=<AddBackward0>)"
+discord.png,discord(1).png_aug180_flip,"tensor(0.7931, grad_fn=<AddBackward0>)"
 google.png,search.png_aug0,"tensor(0.9361, grad_fn=<AddBackward0>)"
 google.png,google(2).png_aug0,"tensor(0.9256, grad_fn=<AddBackward0>)"
 google.png,search.png_aug0_flip,"tensor(0.8767, grad_fn=<AddBackward0>)"

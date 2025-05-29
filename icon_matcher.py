@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import argparse
 import os
 import numpy as np # type: ignore
@@ -230,6 +229,8 @@ def main():
     matcher.load_reference_images(args.ref_folder)
     results = matcher.match_all(args.test_folder, args.top_k, args.format, save_gif=args.gif)
 
+
+
     if args.output:
         if args.format == 'json':
             with open(args.output, 'w') as f:
@@ -241,6 +242,7 @@ def main():
                 for item in results:
                     writer.writerow(item)
         print(f"\nResults saved to {args.output}")
+
 
 if __name__ == "__main__":
     main()

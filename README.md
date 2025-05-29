@@ -2,12 +2,19 @@
 
 Icon Matcher is a Python-based tool for comparing test icons against a reference set of icons using image similarity. This is useful for UI testing, automated comparison of assets, or categorization tasks.
 
-## Features
+## Code Review Highlights
 
-- Compares images from a test folder against a set of reference icons
-- Uses SSIM (Structural Similarity Index) for comparison
-- Outputs results to a CSV file
-- Optional visual output to highlight matches
+This project was developed with careful attention to:
+
+- **Modular Architecture:** Encapsulation of core logic inside the `IconMatcher` class.
+- **Advanced Feature Extraction:** Using a pretrained ResNet50 model with global pooling and feature normalization for robust embeddings.
+- **Robust Preprocessing:** Adaptive thresholding, contour cropping, and padding to standardize icon images.
+- **Augmentation for References:** Rotation and flipping augmentations to improve matching under transformations.
+- **Hybrid Similarity Metric:** Combining cosine similarity of features, SSIM of images, and perceptual hash distances.
+- **Debugging Support:** Optional saving of preprocessed images and detailed logging for easier troubleshooting.
+- **Flexible Output:** Supports CSV and JSON output formats, as well as visualizations and animated GIFs.
+- **Device-aware:** Automatically uses CUDA if available, otherwise falls back to CPU.
+- **Potential Improvements:** The weights used in scoring are fixed parameters; future versions could include learnable weights or saved reference embeddings for performance gains.
 
 ## Installation
 
@@ -48,6 +55,16 @@ python icon_matcher.py \
   --output results.csv
 ```
 
+## Visualization
+
+The project includes visualization of matching results and score distributions:
+
+- Saved PNG images in the `visualizations/` folder show test icons alongside their top matches.
+- Optionally, animated GIFs illustrate matched icon sequences.
+
+To generate visualizations, use the `--gif` flag for GIFs and enable debug mode for preprocessed images.  
+
+
 ## Screenshots
 
 > Below are examples of how visual outputs might look (when enabled):
@@ -56,6 +73,13 @@ python icon_matcher.py \
 ![Google Match](visualizations/google.png)
 ![Instagram Match](visualizations/instagram.png)
 ![PayPal Match](visualizations/paypal.png)
+
+<p align="center">
+  <img src="visualizations/discord.png.gif" width="100"/>
+  <img src="visualizations/google.png.gif" width="100"/>
+  <img src="visualizations/instagram.png.gif" width="100"/>
+  <img src="visualizations/paypal.png.gif" width="100"/>
+</p>
 
 ## Output
 
